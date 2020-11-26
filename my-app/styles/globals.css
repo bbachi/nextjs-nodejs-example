@@ -1,0 +1,40 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  padding: 2%;
+  background-color: rgb(231, 110, 28);
+  color: white;
+  text-align: center;
+}
+
+.display-board {
+  width: 100%;
+  background-color: rgb(555, 200, 789);
+  padding: 5%;
+}
+
+.number {
+  color: rgb(25, 219, 129);
+  font-size: 75px;
+  text-align: center;
+}
+
+.mrgnbtm {
+  margin-top: 20px;
+}
