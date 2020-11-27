@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: next-webapp
+  labels:
+    run: next-webapp
+spec:
+  ports:
+  - port: 3080
+    protocol: TCP
+  selector:
+    app: next-webapp
+  type: NodePort

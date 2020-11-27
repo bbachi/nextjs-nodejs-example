@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+spec:
+  containers:
+    - image: docker.io/bbachin1/next-node-webapp
+      name: webapp
+      imagePullPolicy: Always
+      resources: {}
+      ports:
+        - containerPort: 3080

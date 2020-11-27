@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: next-webapp
+  name: next-webapp
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: next-webapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: next-webapp
+    spec:
+      containers:
+      - image: docker.io/bbachin1/next-node-webapp
+        name: webapp
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 3080 
+status: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: next-webapp
+  labels:
+    run: next-webapp
+spec:
+  ports:
+  - port: 3080
+    protocol: TCP
+  selector:
+    app: next-webapp
+  type: NodePort
