@@ -18,7 +18,7 @@ spec:
         app: next-webapp
     spec:
       containers:
-      - image: docker.io/bbachin1/next-node-webapp
+      - image: nextfrontend.azurecr.io/aksdemo/next-nodejs:v1
         name: webapp
         imagePullPolicy: Always
         resources: {}
@@ -40,4 +40,4 @@ spec:
     protocol: TCP
   selector:
     app: next-webapp
-  type: NodePort
+  type: LoadBalancer
