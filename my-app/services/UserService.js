@@ -12,3 +12,11 @@ export async function createUser(data) {
       })
     return await response.json();
 }
+
+export async function createPayment() {
+    const response = await fetch(`/api/create-checkout-session`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+      })
+    return await response.json();
+}
